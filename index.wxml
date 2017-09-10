@@ -1,0 +1,10 @@
+﻿<view class="container">
+<view class="section__title">请输入单号：{{inputValue}}</view>
+   <input placeholder="快递查询助手"  bindinput="bindKeyInput"/>
+   <button type="primary" bindtap="btnclick"> 查询 </button>
+    <scroll-view scroll-y="true" style="height: 400px;">
+   <view wx:for="{{inputinfo.data}}">
+   {{item.context}}--{{item.time}}--
+</view>
+  </scroll-view>
+</view>
